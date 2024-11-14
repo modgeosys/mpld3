@@ -357,8 +357,8 @@ def show(fig=None, ip='127.0.0.1', port=8888, n_retries=50,
         kwargs['d3_url'] = '/d3.js'
         files = {'/mpld3.js': ["text/javascript",
                                open(urls.MPLD3_LOCAL, 'r').read()],
-                 '/d3.js': ["text/javascript",
-                            open(urls.D3_LOCAL, 'r').read()]}
+                 '/d3.js':    ["text/javascript",
+                               open(urls.D3_LOCAL, 'r', encoding='utf-8').read()]}
     else:
         files = None
 
